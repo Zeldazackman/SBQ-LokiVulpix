@@ -13,6 +13,7 @@
 			"amount": 1
 		}
 	],
+	"charCreationPatch" : false,
 
 	"nameGen": [
 		"/species/humanmalenamegen.config:names",

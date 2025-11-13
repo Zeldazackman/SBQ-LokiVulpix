@@ -7,6 +7,8 @@
 		"subTitle": "C31H27NO4",
 		"description": "You look half digested. Have you been chasing slimes again?\n-Nurse"
 	},
+	"charCreationPatch" : false,
+
 	"nameGen": [
 		"/species/namegen.config:names",
 		"/species/namegen.config:names"
