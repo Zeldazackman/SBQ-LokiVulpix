@@ -1,0 +1,17 @@
+{
+	"version" : "4.0.1",
+	"tags" : "",
+	"author" : "Zygan, LokiVulpix",
+	"description" : "Content for SBQ made by LokiVulpix and Zygan",
+	"link" : "https://www.patreon.com/LokiVulpix",
+	"name" : "SBQ-LokiVulpix",
+	"friendlyName" : "SBQ-LokiVulpix",
+	"includes" : [
+	],
+	"requires" : [
+		"Starbecue"
+	],
+	"scripts" : {
+		"onLoad" : ["/scripts/LokiVulpix/onload.lua"]
+	}
+}
