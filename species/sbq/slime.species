@@ -23,6 +23,8 @@
 			"effectiveMultiplier": 0
 		}
 	],
+	"buildScripts" : ["/humanoid/opensb/build.lua"],
+
 	"pronounGenders" : {"male":"neutral", "female":"neutral"},
 	"effectDirectives": "",
 	"sbqPartImages"  : {},

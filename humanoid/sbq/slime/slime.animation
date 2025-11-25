@@ -140,13 +140,13 @@
 					"jump": { "frames": 1, "cycle": 0.25, "mode": "end", "properties" :{
 					}, "frameProperties":{
 						"movementOffset" : [
-							[["reset"],	["translate",[0,1.5]]]
+							[["reset"],	["translate",[0,0]]]
 						]
 					}},
 					"fall": { "frames": 1, "cycle": 0.25, "mode": "end", "properties" :{
 					}, "frameProperties":{
 						"movementOffset" : [
-							[["reset"],	["translate",[0,1.5]]]
+							[["reset"],	["translate",[0,0]]]
 						]
 					}},
 					"swim": { "frames": 6, "cycle": 2, "mode": "loop", "properties" :{
@@ -545,7 +545,8 @@
 					"transformationGroups": ["backArmRotation"],
 					"anchorPart" : "head",
 					"processingDirectives" : "<bodyDirectives>",
-					"transforms" : [["reset"]]
+					"transforms" : [["reset"]],
+					"rotationCenter" : [10,0]
 				},
 				"partStates": {
 					"backArm" : {
@@ -697,7 +698,8 @@
 					"transformationGroups": ["frontArmRotation"],
 					"anchorPart" : "head",
 					"processingDirectives" : "<bodyDirectives>",
-					"transforms" : [["reset"]]
+					"transforms" : [["reset"]],
+					"rotationCenter" : [-10,0]
 				},
 				"partStates": {
 					"frontArm" : {
