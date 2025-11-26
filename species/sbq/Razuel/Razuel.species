@@ -44,7 +44,7 @@
 					},
 					"facialMask" : {
 						"properties" : {
-							"zLevel":19.1,
+							"zLevel":21.1,
 							"processingDirectives" : "<facialMaskDirectives>"
 						}
 					},
