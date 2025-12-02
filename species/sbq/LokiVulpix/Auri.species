@@ -29,7 +29,7 @@
 			}
 		}
 	],
-	"humanoidConfig" : "/humanoid/sbq/bigQuadruped/bigQuadruped.config",
+	"humanoidConfig" : "/humanoid/wr/bigQuadruped/bigQuadruped.config",
 	"baseColorPalette": {
 		"primary": [
 			"5a4878",
@@ -115,7 +115,7 @@
 	"humanoidOverrides": {
 		"animation" : {
 			"includes" : [
-				"/humanoid/sbq/bigQuadruped/bigQuadruped.animation",
+				"/humanoid/wr/bigQuadruped/bigQuadruped.animation",
 				"/humanoid/sbq/LokiVulpix/Auri/wings.animation"
 			],
 
