@@ -11,7 +11,7 @@
 			"globalTagDefaults" : {},
 			"includes" : [
 				"/humanoid/opensb/humanoid.animation",
-				"/humanoid/sbq/layered_emote.animation",
+				"/humanoid/wr/layered_emote.animation",
 				"tail.animation"
 			],
 			"animatedParts" : {
@@ -527,7 +527,7 @@
 		},
 
 		"sbq/infused/bellyQuadruped.png": {
-			"sourceImage": "/humanoid/sbq/quadruped/belly/default.png",
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -537,7 +537,7 @@
 			]
 		},
 		"sbq/infused/bellyQuadruped_noNavel.png": {
-			"sourceImage": "/humanoid/sbq/quadruped/belly/default.png",
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
 			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[

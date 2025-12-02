@@ -9,6 +9,7 @@
 	"includes" : [
 	],
 	"requires" : [
+		"wr_lib",
 		"Starbecue"
 	],
 	"scripts" : {
