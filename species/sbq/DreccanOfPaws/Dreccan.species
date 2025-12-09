@@ -33,13 +33,13 @@
 					},
 					"facialMask" : {
 						"properties" : {
-							"zLevel":21.1,
+							"zLevel":22.1,
 							"processingDirectives" : "<facialMaskDirectives>"
 						}
 					},
 					"facialHair" : {
 						"properties" : {
-							"zLevel" : 5.91,
+							"zLevel" : 14.91,
 							"processingDirectives" : "<facialMaskDirectives>"
 						}
 					}

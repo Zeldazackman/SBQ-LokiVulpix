@@ -28,8 +28,8 @@
 				"parts" : {
 					"facialMask" : {
 						"properties" : {
-							"flippedZLevel" : 12.9,
-							"zLevel":21.1,
+							"flippedZLevel" : 13.99,
+							"zLevel":22.1,
 							"processingDirectives" : "<facialMaskDirectives>"
 						}
 					},
@@ -38,13 +38,13 @@
 							"anchorPart" : "body",
 							"transformationGroups" : ["headOffset"],
 							"offset" : [0.9375, -0.4375],
-							"zLevel" : 12.9,
+							"zLevel" : 13.9,
 							"processingDirectives" : "<facialHairDirectives>"
 						}
 					}
 					// "glasses" : {
 					// 	"properties" : {
-					// 		"zLevel": 14.1,
+					// 		"zLevel": 15.1,
 					// 		"anchorPart" : "head",
 					// 		"image" : "glasses.png"
 					// 	}
