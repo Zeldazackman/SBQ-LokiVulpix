@@ -2,7 +2,7 @@
 	"kind": "sbq/LokiVulpix/Auri_anthro",
 	"forceName": "Auri",
 	"sbqCompatible" : true,
-	"charCreationPatch" : true,
+	"charCreationPatch" : false,
 	"fallbackShip" : "novakid",
 	"charCreationTooltip": {
 		"title": "Auri",
