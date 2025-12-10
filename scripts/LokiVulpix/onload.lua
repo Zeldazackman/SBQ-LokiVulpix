@@ -1,5 +1,6 @@
 local races = {
 	"sbq/LokiVulpix/Auri",
+	"sbq/LokiVulpix/Auri_anthro",
 	"sbq/LokiVulpix/Loki",
 	"sbq/Auroria/Auroria",
 	"sbq/ambi_sykhar/Ambi",

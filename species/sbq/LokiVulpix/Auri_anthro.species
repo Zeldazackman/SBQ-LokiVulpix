@@ -1,8 +1,8 @@
 {
-	"kind": "sbq/LokiVulpix/Auri",
+	"kind": "sbq/LokiVulpix/Auri_anthro",
 	"forceName": "Auri",
 	"sbqCompatible" : true,
-	"charCreationPatch" : false,
+	"charCreationPatch" : true,
 	"fallbackShip" : "novakid",
 	"charCreationTooltip": {
 		"title": "Auri",
@@ -18,9 +18,6 @@
 		"/sfx/humanoid/humanhurt_female1.ogg"
 	],
 	"skull": "/humanoid/human/dead.png",
-	"altOptionAsFacialMask": true,
-	"altOptionAsHairColor": true,
-	"humanoidConfig" : "/humanoid/wr/quadruped_big/quadruped_big.config",
 	"baseColorPalette": {
 		"primary": [
 			"5a4878",
@@ -101,51 +98,26 @@
 	"undyColor": [
 		""
 	],
+	"altOptionAsUndyColor": true,
+	"altOptionAsFacialMask": true,
+	"altOptionAsHairColor": true,
 	"headOptionAsFacialhair": true,
 	"headOptionAsHairColor": true,
-	"humanoidOverrides": {
+	"humanoidOverrides" : {
+		"useAnimation" : true,
 		"animation" : {
+			"version" : 1,
+			"globalTagDefaults" : {},
 			"includes" : [
-				"/humanoid/wr/quadruped_big/hexaped_big.animation",
-				"/humanoid/sbq/LokiVulpix/Auri/wings.animation"
+				"/humanoid/opensb/humanoid.animation",
+				"/humanoid/wr/layered_emote.animation",
+				"tail.animation"
 			],
-
 			"animatedParts" : {
-				"parts" : {
-					"hair" : {
-						"properties" : {
-							"zLevel" : 8.9
-						}
-					},
-					"facialHair" : {
-						"properties" : {
-							"anchorPart" : "body",
-							"transformationGroups" : ["headOffset"],
-							"offset" : [1.5,0],
-							"zLevel" : 13.9,
-							"processingDirectives" : "<facialHairDirectives>"
-						}
-					}
-				}
-			}
-		},
-		"armRotationOverrides" : {
-			"frontArmRotationCenter": [
-				8,
-				-7
-			],
-			"backArmRotationCenter": [
-				8,
-				-7
-			], // would be [13,7] but we have to offset it because backArmOffset is added to it
-			"frontHandPosition": [
-				22,
-				-8
-			],
-			"backArmOffset": [
-				4,
-				0
-			]
+				"stateTypes" : {},
+				"parts" : {}
+			},
+			"transformationGroups" : {}
 		},
 		"sbqConfig" : {
 			"transformResult": {
@@ -154,7 +126,6 @@
 		}
 	},
 	"potionRarity": "essential",
-	// Big TODO
 	"sbqPartImages": {
 		"sbq/naga/hips.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",

@@ -1,7 +1,7 @@
 {
 	"fallbackShip" : "novakid",
 	"sbqCompatible" : true,
-	"charCreationPatch" : false,
+	"charCreationPatch" : true,
 	"altOptionAsFacialMask": true,
 	"altOptionAsHairColor": true,
 	"humanoidOverrides" : {
