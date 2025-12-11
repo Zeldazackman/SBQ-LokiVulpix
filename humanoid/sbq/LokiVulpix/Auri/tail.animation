@@ -1,7 +1,6 @@
 {
 	"globalTagDefaults" : {
-		"tailFrameset" : "tail.png",
-		"tailSize" : "0"
+		"tailFrameset" : "tail.png"
 	},
 	"animatedParts" : {
 		"stateTypes" : {
@@ -19,13 +18,14 @@
 					"zLevel":-1,
 					"anchorPart" : "body",
 					"transformationGroups" : ["tailOffset"],
-					"processingDirectives" : "<bodyDirectives>"
+					"processingDirectives" : "<bodyDirectives>",
+					"offset" : [-2.75,-1]
 				},
 				"partStates" : {
 					"body": {
-						"idle": { "properties": { "image": "<tailFrameset>:<tailSize>-<tailState_state>.<tailState_frame>" } },
-						"walk": { "properties": { "image": "<tailFrameset>:<tailSize>-<body_state>.<body_frame>" } },
-						"run": { "properties": { "image": "<tailFrameset>:<tailSize>-run.<body_frame>" } },
+						"idle": { "properties": { "image": "<tailFrameset>:idle.1" } },
+						"walk": { "properties": { "image": "<tailFrameset>:idle.1" } },
+						"run": { "properties": { "image": "<tailFrameset>:idle.1" } },
 						"runbackwards": "run",
 						"jump": "walk",
 						"fall": "walk",
