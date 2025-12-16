@@ -293,7 +293,7 @@
 					{
 						"particle": {
 							"type": "animated",
-							"animation": "/animations/playerdeath-Wasabi_Raptor_PokemonDeath/playerdeath.animation",
+							"animation": "/animations/sbq/pokemon/playerdeath/anthro/playerdeath.animation",
 							"size": 1,
 							"angularVelocity": 0,
 							"fade": 1,

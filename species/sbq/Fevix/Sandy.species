@@ -109,7 +109,7 @@
 					{
 						"particle": {
 							"type": "animated",
-							"animation": "/animations/playerdeath-Wasabi_Raptor_PokemonDeath/quadruped/playerdeath.animation",
+							"animation": "/animations/sbq/pokemon/playerdeath/quadruped/playerdeath.animation",
 							"size": 1,
 							"angularVelocity": 0,
 							"fade": 1,
