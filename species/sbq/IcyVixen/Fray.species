@@ -323,6 +323,7 @@
 
 	"potionImagePath": "/humanoid/sbq/IcyVixen/Fray/potion/",
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/IcyVixen/Fray", "gender" : "male"} }, "materials" : [ { "item" : "money", "count" : 8888 } ]},
 	"skull": "/humanoid/human/dead.png",
 	"defaultBlueprints": {
 		"tier1": [

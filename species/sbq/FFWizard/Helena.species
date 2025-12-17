@@ -309,6 +309,7 @@
 		"/sfx/humanoid/humanhurt_female1.ogg"
 	],
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/FFWizard/Helena", "gender" : "female"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 	"sbqSettingsConfig": {
 		"includes" : [
 			"/npcs/sbq/FFWizard/Helena/tenant.npctype:scriptConfig.sbqSettingsConfig"

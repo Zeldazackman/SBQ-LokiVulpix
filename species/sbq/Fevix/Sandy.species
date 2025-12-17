@@ -145,6 +145,7 @@
 	},
 	"potionImagePath": "/humanoid/sbq/Fevix/Sandy/potion/",
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/Fevix/Sandy", "gender" : "female"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 	"sbqSettingsConfig": {
 		"includes" : [
 			"/npcs/sbq/Fevix/Sandy/tenant.npctype:scriptConfig.sbqSettingsConfig"

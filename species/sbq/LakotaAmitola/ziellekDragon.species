@@ -369,6 +369,7 @@
 	"potionDesc": "The pearl of a Ziellek Dragon...\nFor some reason you feel the urge to swallow it.",
 	"potionImagePath": "/humanoid/sbq/LakotaAmitola/ziellekDragon/potion/",
 	"potionRarity": "legendary",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/LakotaAmitola/ziellekDragon"} }, "materials" : [ { "item" : "money", "count" : 8008 } ]},
 	"potionShortDesc": "Ziellek Pearl",
 
 	"sbqTenantData" : {

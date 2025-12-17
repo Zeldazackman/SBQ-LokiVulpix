@@ -15,6 +15,7 @@
 	"buildScripts" : ["/humanoid/opensb/build.lua"],
 	"createScripts" : ["/species/sbq/DreccanOfPaws/Dreccan.lua"],
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/DreccanOfPaws/Dreccan", "gender" : "female"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 	"humanoidOverrides" : {
 		"animation" : {
 			"animatedParts" : {

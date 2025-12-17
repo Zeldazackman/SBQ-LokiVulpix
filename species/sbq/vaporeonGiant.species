@@ -47,6 +47,7 @@
 	},
 	"potionImagePath": "/humanoid/sbq/vaporeonGiant/potion/",
 	"potionRarity": "legendary",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/vaporeonGiant"} }, "materials" : [ { "item" : "money", "count" : 8008 } ]},
 	"skull": "/humanoid/human/dead.png",
 
 	"sbqPartImages" : {},

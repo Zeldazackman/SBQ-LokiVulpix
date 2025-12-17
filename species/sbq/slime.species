@@ -137,6 +137,7 @@
 
 	"potionImagePath": "/humanoid/sbq/slime/potion/",
 	"potionRarity": "legendary",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/slime"} }, "materials" : [ { "item" : "money", "count" : 808 } ]},
 	"skull": "/humanoid/human/dead.png",
 	"defaultBlueprints": {
 		"tier1": [

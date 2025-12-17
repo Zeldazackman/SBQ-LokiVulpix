@@ -15,6 +15,7 @@
 	"buildScripts" : ["/humanoid/opensb/build.lua"],
 	"createScripts" : ["/species/sbq/Razuel/Razuel.lua"],
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/Razuel/Razuel", "gender" : "male"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 	"humanoidOverrides" : {
 		"animation" : {
 			"version" : 1,

@@ -85,6 +85,7 @@
 	],
 	"potionImagePath": "/humanoid/sbq/Xeronious/Kaiju/potion/",
 	"potionRarity": "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/Xeronious/Kaiju"} }, "materials" : [ { "item" : "money", "count" : 8888 } ]},
 	"sbqConfig": [
 		"/species/sbq/disableTFActions.config",
 		"/species/sbq/disableAllVorePrey.config",

@@ -120,6 +120,7 @@
 	],
 
 	"potionRarity" : "essential",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/SilentBuizel/Stardust", "gender" : "male"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 
 	"sbqSettingsConfig": {
 		"includes" : [

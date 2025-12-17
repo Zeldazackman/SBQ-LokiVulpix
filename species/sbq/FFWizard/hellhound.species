@@ -447,6 +447,7 @@
 		"sbq_nude_legs"
 	],
 	"potionRarity": "rare",
+	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/FFWizard/hellhound"} }, "materials" : [ { "item" : "money", "count" : 800 } ]},
 	"sbqSettingsConfig": {
 		"defaultSettings": {"any":{
 			"navelVisible": true,
