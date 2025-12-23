@@ -108,6 +108,11 @@
 	"headOptionAsFacialhair": true,
 	"headOptionAsHairColor": true,
 	"humanoidOverrides": {
+		"identityFramesetTags" : {
+			"hindlegFrontFrameset" : "legs/hindlegFront.png",
+
+			"hindlegFrontFlippedFrameset" : "legs/flippedHindlegFront.png"
+		},
 		"particleEmitters": {
 			"deathPoof": {
 				"particles": [
