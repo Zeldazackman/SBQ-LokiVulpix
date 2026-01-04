@@ -127,6 +127,31 @@
 	},
 	"potionRarity": "essential",
 	"sbqPartImages": {
+		"sbq/noLegs/malebody.png" : {
+			"sourceImage" : "malebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_male.png;0;0;",
+			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
+		},
+		"sbq/noLegs/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_female.png;0;0;",
+			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
+		},
+		"sbq/malebody.png" : {
+			"sourceImage" : "malebody.png"
+		},
+		"sbq/femalebody.png" : {
+			"sourceImage" : "femalebody.png"
+		},
+		"sbq/fg/malebody.png" : {
+			"sourceImage" : "malebody.png",
+			"processingDirectives" : "?addmask=/humanoid/gnolls/sbq/legMask.png;0;0;"
+		},
+		"sbq/fg/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/gnolls/sbq/legMask.png;0;0;"
+		},
+
 		"sbq/naga/hips.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
 			"remapDirectives": [

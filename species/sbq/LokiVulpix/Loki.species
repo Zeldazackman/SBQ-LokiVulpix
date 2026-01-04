@@ -1,7 +1,7 @@
 {
 	"fallbackShip" : "novakid",
 	"sbqCompatible" : true,
-	"charCreationPatch" : true,
+	"charCreationPatch" : false,
 	"altOptionAsFacialMask": true,
 	"altOptionAsHairColor": true,
 	"humanoidOverrides" : {
@@ -326,11 +326,11 @@
 		},
 		"sbq/fg/malebody.png" : {
 			"sourceImage" : "malebody.png",
-			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
+			"processingDirectives" : "?addmask=/humanoid/gnolls/sbq/legMask.png;0;0;"
 		},
 		"sbq/fg/femalebody.png" : {
 			"sourceImage" : "femalebody.png",
-			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
+			"processingDirectives" : "?addmask=/humanoid/gnolls/sbq/legMask.png;0;0;"
 		},
 
 
