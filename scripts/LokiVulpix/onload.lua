@@ -1,4 +1,11 @@
 local races = {
+	"wr/nimbat",
+
+	"sbq/FFWizard/hellhound",
+
+	"sbq/vaporeonGiant",
+	"sbq/slime",
+
 	"sbq/LokiVulpix/Auri",
 	"sbq/LokiVulpix/Auri_anthro",
 	"sbq/LokiVulpix/Loki",
@@ -6,14 +13,11 @@ local races = {
 	"sbq/ambi_sykhar/Ambi",
 	"sbq/Zygahedron/Zevi",
 	"sbq/Fevix/Sandy",
-	"sbq/vaporeonGiant",
 	"sbq/LokiVulpix/Socks",
 	"sbq/FFWizard/Helena",
-	"sbq/FFWizard/hellhound",
 	"sbq/LokiVulpix/Clover",
 	"sbq/Xeronious/Batty",
 	"sbq/AkariKaen/Akari",
-	"sbq/slime",
 	"sbq/Xeronious/Kaiju",
 	"sbq/IcyVixen/Fray",
 	"sbq/LakotaAmitola/ziellekDragon",

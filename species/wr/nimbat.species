@@ -1,0 +1,721 @@
+{
+	"kind" : "wr/nimbat",
+
+	"potionRarity" : "rare",
+	"charCreationPatch":true,
+	"charCreationTooltip" : {
+		"title" : "Nimbat",
+		"subTitle" : "",
+		"description" : ""
+	},
+	"fallbackShip" : "novakid",
+	"effectDirectives" : "?replace;31a6ff=428000;9bd4ffFF=5db300;FEFFFF=c8ff8c;",
+
+	"nameGen" : [ "/species/humanmalenamegen.config:names", "/species/humanfemalenamegen.config:names" ],
+
+	"buildScripts" : ["/humanoid/opensb/build.lua"],
+	"createScripts" : ["/species/wr/nimbat.lua"],
+	"humanoidOverrides" : {
+		"useAnimation" : true,
+		"animation" : {
+			"version" : 1,
+			"globalTagDefaults" : {},
+			"includes" : [
+				"/humanoid/opensb/humanoid.animation",
+				"/humanoid/wr/layered_emote.animation",
+				"tail.animation",
+				"wings.animation"
+			],
+			"animatedParts" : {
+				"stateTypes" : {},
+				"parts" : {}
+			},
+			"transformationGroups" : {}
+		},
+		"stateAnimations" : {
+			// "jump" : {"wings":["jump", false, false]},
+			// "fall" : {"wings":["jump", false, false]},
+
+			// "idle" : {"wings":["idle", false, false]},
+			// "duck" : {"wings":["idle", false, false]},
+			// "sit" : {"wings":["idle", false, false]},
+			// "lay" : {"wings":["idle", false, false]},
+			// "walk" : {"wings":["idle", false, false]},
+			// "run" : {"wings":["idle", false, false]},
+			// "swim" : {"wings":["idle", false, false]},
+			// "swimIdle" : {"wings":["idle", false, false]}
+		},
+		"movementParameters" : {
+			"airJumpProfile" : {
+				"multiJump" : true
+			}
+		}
+	},
+	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
+	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
+
+	"skull" : "/humanoid/human/dead.png",
+
+	"baseColorPalette" : {
+		"primary" : ["d6760c","ee7f07","b25938"], // orange fur
+		"secondary" : ["a49ba8","d6cfda","efedf0","f9f6fb"], // white fur
+		"tertiary" : ["db8846","e69656","feb271"], // wings/ears
+		"flesh" : ["851f54","a33d61","b34b70"], // beans
+		"hair" : ["735e3a", "a38d59", "d9c189", "f7e7b2"],
+		"accessories" : ["951500", "be1b00", "dc1f00", "f32200"]
+	},
+
+	"genders" : [
+		{
+			"name" : "male",
+			"image" : "/interface/title/male.png",
+			"characterImage" : "/humanoid/wr/nimbat/icon.png"
+		},
+		{
+			"name" : "female",
+			"image" : "/interface/title/female.png",
+			"characterImage" : "/humanoid/wr/nimbat/icon.png"
+		}
+	],
+	"charGenTextLabels" : [
+		"Fur Color", // body color
+		"Belly Color", // hair type
+		"Wings Color", // shirt
+		"Eye Color", // pants
+
+		"Hair Color", // alt option - undy color - facial mask
+		"Hair Style", // head option - hair color - facial hair
+		"-", // shirt color
+		"-", // pants color
+
+		"Nimbat", // species
+		"Personality" // personality
+	],
+
+	"hairStyle" : [
+		""
+		// "male1", "male2", "male3", "male4", "male5", "male6", "male7", "male8", "male9", "male10", "male11", "male12", "male13", "male14", "male15", "male16", "male17", "male18", "male19", "male21", "male22", "male23", "male24", "male25", "male26", "male27", "male28", "male29", "male30", "male31", "male32", "male33", "male34", "male35", "male36", "male37", "male38", "male39", "male40", "male41", "male42", "male43", "male44", "male45", "male46", "male47", "male48", "male49", "male50", "male51", "male52", "male53", "male58", "male59", "male60", "male61", "male62", "male63", "male64",
+		// "",
+		// "fem1", "fem2", "fem3", "fem4", "fem5", "fem6", "fem7", "fem8", "fem9", "fem10", "fem11", "fem12", "fem13", "fem14", "fem15", "fem16", "fem17", "fem18", "fem19", "fem20", "fem21", "fem22", "fem23", "fem24", "fem25", "fem26", "fem27", "fem28", "fem29", "fem30", "fem31", "fem32", "fem33", "fem34", "fem35", "fem36", "fem37", "fem38", "fem39", "fem40", "fem41", "fem42", "fem43", "fem44", "fem45", "fem46", "fem47", "fem48", "fem49", "fem50", "fem51", "fem52", "fem53", "fem54", "fem56", "fem57", "fem58", "fem59", "fem60", "fem61", "fem62", "fem63", "fem64"
+	],
+
+	// These are the tables for the replace colors, if your sprites neeed to have their colors replaced, you should probably define those colors here
+	"primaryColor" : [ // primary
+		"?replace;d6760c=d7760c;ee7f07=ef7f07;ff9d01=ff9d00;", // default orange
+		"?replace;d6760c=d6390c;ee7f07=ee3a07;ff9d01=ff5101;", // red
+		"?replace;d6760c=b84dbd;ee7f07=cc58d1;ff9d01=f07cf5;", // pink
+		"?replace;d6760c=6605bd;ee7f07=7c13db;ff9d01=9935f5;", // purple
+		"?replace;d6760c=0071a3;ee7f07=0889c2;ff9d01=14a9eb;", // blue
+		"?replace;d6760c=55a300;ee7f07=75d60c;ff9d01=75d60c;", // green
+		"?replace;d6760c=d6aa0c;ee7f07=eebc07;ff9d01=ffde01;" // yellow
+	],
+	"bellyColor" : [ // secondary
+		"?replace;6d6670=6d6671;a49ba8=a49ba9;d6cfda=d6cfdb;efedf0=efedfe;f9f6fb=f9f6fc;" // default white
+	],
+	"wingsColor" : [ // tertiary
+		"?replace;db8846=dc8846;e69656=e79656;feb271=ffb271;", // default cream
+		"?replace;db8846=a49ba9;e69656=d6cfdb;feb271=efedfe;", // white
+		"?replace;db8846=cc3838;e69656=db4646;feb271=f05e5e;", // red
+		"?replace;db8846=ce7cd1;e69656=dd8fe0;feb271=edaaf0;", // pink
+		"?replace;db8846=8454c2;e69656=996ad6;feb271=a578e0;", // purple
+		"?replace;db8846=61a5d1;e69656=61a5d1;feb271=78b8e0;", // blue
+		"?replace;db8846=41b336;e69656=51c246;feb271=62d158;", // green
+		"?replace;db8846=c7b434;e69656=dbc849;feb271=f0dd5e;" // yellow
+	],
+
+	"hairColor" : [ // hair color
+		"?replace;735e3a=d7760c;a38d59=ef7f07;d9c189=ff9d00;f7e7b2=ff9d00;" // default orange
+	],
+	"eyeColor" : [  // eyes
+		"?replace;467414=467514;53851d=53861d;97db4c=97dc4c;68a822=68a922;" // green
+	],
+
+
+	"sbqCompatible" : true,
+	"sbqTFAny" : true,
+	"sbqTenantData" : {
+		"colonyTagCriteria" : {
+			"hoard" : 8,
+			"valuable" : 16
+		},
+		"guardColonyTagCriteria" : [ // merges over colonyTagCriteria for the tier of guard
+		// in vanilla there is only tiers 1-4 of guard, but since many mods extend the tiers
+		// it is good to define them anyway even if they might not be obtainable
+			{"combat":8},
+			{"combat":8,"tier2":12},
+			{"combat":8,"tier3":12},
+			{"combat":8,"tier4":12},
+			{"combat":8,"tier5":12},
+			{"combat":8,"tier6":12},
+			{"combat":8,"tier7":12},
+			{"combat":8,"tier8":12},
+			{"combat":8,"tier9":12},
+			{"combat":8,"tier10":12}
+		],
+		"tenant" : {
+			"spawn": "npc", "species": "wr/nickit", "type": "sbqVoreTenant", "overrides": {},
+			"orderFurniture" : [
+				{"name":"carbed", "count":1},
+				{"name":"jukebox", "count":1},
+				{"name":"royalthrone", "count":1},
+				{"name":"diamonddisplay", "count":1},
+				{"name":"goldenegg", "count":1},
+				{"name":"goldenducky", "count":1},
+				{"name":"treasurechest", "count":1},
+				{"name":"barrelgoldfilled", "count":1},
+				{"name":"woodencrategoldfilled", "count":1}
+			]
+		},
+		"guardTenant" : [ // merges on top of the base tenant
+			{"level": 1, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 2, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 3, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 4, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 5, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 6, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 7, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 8, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 9, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}},
+			{"level": 10, "type": "sbqVoreFriendlyGuardTenant", "overrides": {}}
+		]
+	},
+	"sbqSettingsConfig": {
+		"defaultSettings": {"any":{
+			"navelVisible": true,
+			"nipplesVisible": true
+		}}
+	},
+
+	"sbqPartImages": {
+		"sbq/naga/hips.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/naga/hips.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/naga/belly.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_belly.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/naga/belly.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_belly.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/naga/end.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_end.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/naga/end.png" : {
+			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_end.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+
+		"sbq/nickit_tail.png" : {
+			"sourcePalette" : "/humanoid/any/sbqModules/nickit_tail/palette.config",
+			"sourceImage" : "/humanoid/any/sbqModules/nickit_tail/nickit_tail.png",
+			"remapDirectives": [
+				[
+					"primary", // red fur
+					"primary"
+				],
+				[
+					"secondary", // black fur
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/nickit_tail.png" : {
+			"sourcePalette" : "/humanoid/any/sbqModules/nickit_tail/palette.config",
+			"sourceImage" : "/humanoid/any/sbqModules/nickit_tail/nickit_tail.png",
+			"remapDirectives": [
+				[
+					"primary", // red fur (main)
+					"primary"
+				],
+				[
+					"secondary", // black fur (end)
+					"secondary"
+				]
+			]
+
+		},
+		"sbq/flareon_tail.png" : {
+			"sourcePalette" : "/species/wr/flareon.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/flareon/tail.png",
+			"remapDirectives": [
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/flareon_tail.png" : {
+			"sourcePalette" : "/species/wr/flareon.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/flareon/tail.png",
+			"remapDirectives": [
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/vaporeon_tail.png" : {
+			"sourcePalette" : "/species/wr/vaporeon.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/vaporeon/tail.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				],
+				[
+					"tertiary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/vaporeon_tail.png" : {
+			"sourcePalette" : "/species/wr/vaporeon.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/vaporeon/tail.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"secondary",
+					"secondary"
+				],
+				[
+					"tertiary",
+					"secondary"
+				]
+			]
+		},
+
+		"sbq/luxio_tail.png" : {
+			"sourcePalette" : "/species/wr/luxio.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/luxio/tail.png",
+			"remapDirectives": [
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/infused/luxio_tail.png" : {
+			"sourcePalette" : "/species/wr/luxio.species:baseColorPalette",
+			"sourceImage" : "/humanoid/wr/luxio/tail.png",
+			"remapDirectives": [
+				[
+					"secondary",
+					"secondary"
+				]
+			]
+		},
+
+		"sbq/quadruped/belly.png": {
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
+			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/quadruped/belly_noNavel.png": {
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
+			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/quadruped/belly.png": {
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
+			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/quadruped/belly_noNavel.png": {
+			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
+			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/belly.png": {
+			"sourceImage": "/humanoid/any/sbqModules/belly/default.png",
+			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/belly_noNavel.png": {
+			"sourceImage": "/humanoid/any/sbqModules/belly/default.png",
+			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/cock.png": {
+			"sourceImage": "/humanoid/any/sbqModules/cock/default.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/cock.png": {
+			"sourceImage": "/humanoid/any/sbqModules/cock/default.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"primary"
+				]
+			]
+		},
+		"sbq/ballsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/ballsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/ballsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/ballsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/balls/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/pussy.png": {
+			"sourceImage": "/humanoid/any/sbqModules/pussy/default.png",
+			"remapDirectives": [
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/pussy.png": {
+			"sourceImage": "/humanoid/any/sbqModules/pussy/default.png",
+			"remapDirectives": [
+				[
+					"flesh",
+					"primary"
+				]
+			]
+		},
+		"sbq/breastsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/breastsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/breastsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/breastsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/breastsFront_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/breastsBack_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"tertiary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/breastsFront_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"flesh",
+					"primary"
+				]
+			]
+		},
+		"sbq/infused/breastsBack_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"primary"
+				],
+				[
+					"flesh",
+					"primary"
+				]
+			]
+		}
+	},
+
+	// vanilla default human recipes
+	"defaultBlueprints" : {
+		"tier1" : [
+
+// Empty Hands
+			{ "item" : "flaghuman" },
+
+// Anvil
+			{ "item" : "humantier1head" },
+			{ "item" : "humantier1chest" },
+			{ "item" : "humantier1pants" },
+			{ "item" : "humantier2head" },
+			{ "item" : "humantier2chest" },
+			{ "item" : "humantier2pants" },
+
+			{ "item" : "ironshortsword" },
+			{ "item" : "ironbroadsword" },
+			{ "item" : "tungstenaxe" },
+			{ "item" : "tungstenhammer" },
+
+// Anvil2
+			{ "item" : "humantier3head" },
+			{ "item" : "humantier3chest" },
+			{ "item" : "humantier3pants" },
+			{ "item" : "humantier4head" },
+			{ "item" : "humantier4chest" },
+			{ "item" : "humantier4pants" },
+
+			{ "item" : "titaniumdagger" },
+			{ "item" : "titaniumspear" },
+			{ "item" : "durasteelbroadsword" },
+			{ "item" : "durasteelshortsword" },
+
+// Anvil3
+			{ "item" : "humantier5ahead" },
+			{ "item" : "humantier5achest" },
+			{ "item" : "humantier5apants" },
+			{ "item" : "humantier6ahead" },
+			{ "item" : "humantier6achest" },
+			{ "item" : "humantier6apants" },
+
+			{ "item" : "humantier5mhead" },
+			{ "item" : "humantier5mchest" },
+			{ "item" : "humantier5mpants" },
+			{ "item" : "humantier6mhead" },
+			{ "item" : "humantier6mchest" },
+			{ "item" : "humantier6mpants" },
+
+			{ "item" : "humantier5shead" },
+			{ "item" : "humantier5schest" },
+			{ "item" : "humantier5spants" },
+			{ "item" : "humantier6shead" },
+			{ "item" : "humantier6schest" },
+			{ "item" : "humantier6spants" },
+
+			{ "item" : "aegisaltpistol" },
+			{ "item" : "aegisaltbow" },
+			{ "item" : "feroziumwand" },
+			{ "item" : "feroziumstaff" },
+			{ "item" : "violiumshortsword" },
+			{ "item" : "violiumbroadsword" },
+
+// Furniture Table 2
+			{ "item" : "humanstoragelocker" },
+			{ "item" : "humanshipdoor" },
+			{ "item" : "humanshiphatch" },
+
+// Spinning Wheel
+			{ "item" : "conceptchest" },
+			{ "item" : "conceptlegs" },
+			{ "item" : "coolchest" },
+			{ "item" : "coollegs" },
+			{ "item" : "sweatervestchest" },
+			{ "item" : "sweatervestlegs" },
+			{ "item" : "workoutchest" },
+			{ "item" : "workoutlegs" }
+		]
+	}
+
+}
