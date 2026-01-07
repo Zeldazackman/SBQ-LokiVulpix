@@ -28,6 +28,7 @@ local races = {
 	"sbq/Razuel/Razuel",
 	"sbq/SilentBuizel/Stardust",
 	"sbq/Razumdar_/Raz",
+	"sbq/EloTheHobkin/Elo",
 }
 local charcreation_patch = {}
 local universe_server_patch = {}

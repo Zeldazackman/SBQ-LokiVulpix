@@ -93,7 +93,8 @@
 	],
 
 	"hairStyle" : [
-		""
+		"",
+		"0"
 		// "male1", "male2", "male3", "male4", "male5", "male6", "male7", "male8", "male9", "male10", "male11", "male12", "male13", "male14", "male15", "male16", "male17", "male18", "male19", "male21", "male22", "male23", "male24", "male25", "male26", "male27", "male28", "male29", "male30", "male31", "male32", "male33", "male34", "male35", "male36", "male37", "male38", "male39", "male40", "male41", "male42", "male43", "male44", "male45", "male46", "male47", "male48", "male49", "male50", "male51", "male52", "male53", "male58", "male59", "male60", "male61", "male62", "male63", "male64",
 		// "",
 		// "fem1", "fem2", "fem3", "fem4", "fem5", "fem6", "fem7", "fem8", "fem9", "fem10", "fem11", "fem12", "fem13", "fem14", "fem15", "fem16", "fem17", "fem18", "fem19", "fem20", "fem21", "fem22", "fem23", "fem24", "fem25", "fem26", "fem27", "fem28", "fem29", "fem30", "fem31", "fem32", "fem33", "fem34", "fem35", "fem36", "fem37", "fem38", "fem39", "fem40", "fem41", "fem42", "fem43", "fem44", "fem45", "fem46", "fem47", "fem48", "fem49", "fem50", "fem51", "fem52", "fem53", "fem54", "fem56", "fem57", "fem58", "fem59", "fem60", "fem61", "fem62", "fem63", "fem64"
@@ -187,6 +188,32 @@
 	},
 
 	"sbqPartImages": {
+		"sbq/noLegs/malebody.png" : {
+			"sourceImage" : "malebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_male.png;0;0;",
+			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
+		},
+		"sbq/noLegs/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_female.png;0;0;",
+			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
+		},
+		"sbq/malebody.png" : {
+			"sourceImage" : "malebody.png"
+		},
+		"sbq/femalebody.png" : {
+			"sourceImage" : "femalebody.png"
+		},
+		"sbq/fg/malebody.png" : {
+			"sourceImage" : "malebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
+		},
+		"sbq/fg/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
+		},
+
+
 		"sbq/naga/hips.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
 			"remapDirectives": [
@@ -351,7 +378,6 @@
 				]
 			]
 		},
-
 		"sbq/luxio_tail.png" : {
 			"sourcePalette" : "/species/wr/luxio.species:baseColorPalette",
 			"sourceImage" : "/humanoid/wr/luxio/tail.png",
@@ -373,33 +399,13 @@
 			]
 		},
 
-		"sbq/quadruped/belly.png": {
-			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
-			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
-			"remapDirectives": [
-				[
-					"primary",
-					"tertiary"
-				]
-			]
-		},
-		"sbq/quadruped/belly_noNavel.png": {
-			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
-			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
-			"remapDirectives": [
-				[
-					"primary",
-					"tertiary"
-				]
-			]
-		},
 		"sbq/infused/quadruped/belly.png": {
 			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"primary"
 				]
 			]
 		},
@@ -409,7 +415,28 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"primary"
+				]
+			]
+		},
+
+		"sbq/belly.png": {
+			"sourceImage": "/humanoid/any/sbqModules/belly/default.png",
+			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				]
+			]
+		},
+		"sbq/belly_noNavel.png": {
+			"sourceImage": "/humanoid/any/sbqModules/belly/default.png",
+			"processingDirectives": "?replace;00adba=eb3629", // this replaces the navel pixel, don't touch this
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
 				]
 			]
 		},
@@ -419,7 +446,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				]
 			]
 		},
@@ -429,7 +456,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				]
 			]
 		},
@@ -456,7 +483,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				]
 			]
 		},
@@ -474,7 +501,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				]
 			]
 		},
@@ -510,7 +537,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				],
 				[
 					"primary_180",
@@ -527,7 +554,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				],
 				[
 					"primary_180",
@@ -547,7 +574,7 @@
 				],
 				[
 					"primary",
-					"primary"
+					"secondary"
 				],
 				[
 					"flesh",
@@ -563,7 +590,7 @@
 				],
 				[
 					"primary",
-					"primary"
+					"secondary"
 				],
 				[
 					"flesh",
@@ -576,7 +603,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				],
 				[
 					"primary_180",
@@ -593,7 +620,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"tertiary"
+					"secondary"
 				],
 				[
 					"primary_180",
@@ -613,11 +640,11 @@
 				],
 				[
 					"primary",
-					"primary"
+					"secondary"
 				],
 				[
 					"flesh",
-					"primary"
+					"tertiary"
 				]
 			]
 		},
@@ -629,11 +656,11 @@
 				],
 				[
 					"primary",
-					"primary"
+					"secondary"
 				],
 				[
 					"flesh",
-					"primary"
+					"tertiary"
 				]
 			]
 		}

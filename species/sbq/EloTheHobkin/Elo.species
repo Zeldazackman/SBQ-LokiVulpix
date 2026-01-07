@@ -1,53 +1,71 @@
 {
-	"kind" : "sbq/Razumdar_/Raz",
+	"kind" : "sbq/EloTheHobkin/Elo",
 
 	"charCreationPatch":false,
 	"charCreationTooltip" : {
-		"title" : "Raz",
-		"subTitle" : "The potential for vore.",
-		"description" : "Are you sure you're supposed to be able to read this?"
+		"title" : "Nimbat",
+		"subTitle" : "",
+		"description" : ""
 	},
+	"fallbackShip" : "novakid",
+	"effectDirectives" : "?replace;31a6ff=428000;9bd4ffFF=5db300;FEFFFF=c8ff8c;",
 
 	// this is just to make sure if you make them show up in the character creator they default to their proper name
-	"nameGen" : [ "/species/sbq/Razumdar_/Raz.species:nameGenConfig", "/species/sbq/Razumdar_/Raz.species:nameGenConfig" ],
-	"nameGenConfig": ["Raz"],
-	"forceName" : "Raz", // this makes it so when using SBQ's TF system, players are forced to use their name when tfed as them
+	"nameGen" : [ "/species/sbq/EloTheHobkin/Elo.species:nameGenConfig", "/species/sbq/EloTheHobkin/Elo.species:nameGenConfig" ],
+	"nameGenConfig": ["Elo"],
+	"forceName" : "Elo", // this makes it so when using SBQ's TF system, players are forced to use their name when tfed as them
 	"potionRarity" : "essential", // OCs typically have essential rarity for the potions
-	"potionShopRecipe" : {"parameters":{ "identity":{"species" : "sbq/Razumdar_/Raz", "gender" : "male"} }, "materials" : [ { "item" : "money", "count" : 888 } ]},
 
-	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
-	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_male1.ogg" ],
-
-	"charGenTextLabels" : [ "Skin colour", "Hair style", "Shirt", "Legwear", "Underwear", "Hair colour", "Shirt colour", "Legwear colour", "Species", "Personality" ],
-	"skull" : "/humanoid/human/dead.png",
-	"effectDirectives" : "?replace=FEFFFFFF=FFFFFFFF?replace=9bd4ffFF=ffea63FF?replace=31a6ffFF=f5bc00FF",
-
+	"buildScripts" : ["/humanoid/opensb/build.lua"],
+	"createScripts" : ["/species/sbq/EloTheHobkin/nimbat.lua"],
 	"humanoidOverrides" : {
 		"useAnimation" : true,
-		"identityFramesetTags" : {
-			"headFrameset" : "head/head.png",
-			"headFlippedFrameset" : "head/head_flipped.png"
-		},
 		"animation" : {
 			"version" : 1,
 			"globalTagDefaults" : {},
 			"includes" : [
 				"/humanoid/opensb/humanoid.animation",
 				"/humanoid/wr/layered_emote.animation",
-				"tail.animation"
+				"tail.animation",
+				"wings.animation"
 			],
 			"animatedParts" : {
 				"stateTypes" : {},
 				"parts" : {}
 			},
 			"transformationGroups" : {}
+		},
+		"stateAnimations" : {
+			// "jump" : {"wings":["jump", false, false]},
+			// "fall" : {"wings":["jump", false, false]},
+
+			// "idle" : {"wings":["idle", false, false]},
+			// "duck" : {"wings":["idle", false, false]},
+			// "sit" : {"wings":["idle", false, false]},
+			// "lay" : {"wings":["idle", false, false]},
+			// "walk" : {"wings":["idle", false, false]},
+			// "run" : {"wings":["idle", false, false]},
+			// "swim" : {"wings":["idle", false, false]},
+			// "swimIdle" : {"wings":["idle", false, false]}
+		},
+		"movementParameters" : {
+			"airJumpProfile" : {
+				"multiJump" : true
+			}
 		}
 	},
+	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
+	"ouchNoises" : [ "/sfx/humanoid/humanhurt_male1.ogg", "/sfx/humanoid/humanhurt_female1.ogg" ],
 
+	"skull" : "/humanoid/human/dead.png",
 
-	"altOptionAsUndyColor" : true,
-	"headOptionAsHairColor" : true,
-	"altOptionAsHairColor" : true,
+	"baseColorPalette" : {
+		"primary" : ["141412","1f1f1e","292929"], // orange fur
+		"secondary" : ["11b2c2","1dcadb","19eaff"], // white fur
+		"tertiary" : ["11b2c2","1dcadb","19eaff"], // wings/ears
+		"flesh" : ["851f54","a33d61","b34b70"] // beans
+	},
+
 	"genders" : [
 		{
 			"name" : "male",
@@ -55,35 +73,54 @@
 			"characterImage" : "/interface/title/male.png"
 		},
 		{
-			"name" : "male",
-			"image" : "/interface/title/male.png",
-			"characterImage" : "/interface/title/male.png"
+			"name" : "female",
+			"image" : "/interface/title/female.png",
+			"characterImage" : "/interface/title/female.png"
 		}
 	],
-	"hair" : [ "0" ],
-	"shirt" : [ "sbq_nude_chest" ],
-	"pants" : [ "sbq_nude_legs" ],
-	"facialHairGroup" : "",
-	"facialHair" : [ "" ],
-	"facialMaskGroup" : "",
-	"facialMask" : [ "" ],
+	"charGenTextLabels" : [
+		"Fur Color", // body color
+		"Belly Color", // hair type
+		"Wings Color", // shirt
+		"Eye Color", // pants
+
+		"Hair Color", // alt option - undy color - facial mask
+		"Hair Style", // head option - hair color - facial hair
+		"-", // shirt color
+		"-", // pants color
+
+		"Nimbat", // species
+		"Personality" // personality
+	],
+
+	"hairStyle" : [
+		"0"
+	],
 
 	// These are the tables for the replace colors, if your sprites neeed to have their colors replaced, you should probably define those colors here
-	"bodyColor" : [
-		"?replace;90d651=90d651FE;a2f05c=a2f05cFE;243417=243417FE;31461f=31461fFE;"
+	"primaryColor" : [ // primary
+		"?replace;24b800=24b800FE;2ad600=2ad600FE;32ff00=32ff00FE;bdbdbd=bdbdbdFE;ffffff=ffffffFE;bf2fc2=bf2fc2FE;e23fe6=e23fe6FE;"
 	],
-	"undyColor" : [
+	"bellyColor" : [ // secondary
 		""
 	],
-	"hairColor" : [
+	"wingsColor" : [ // tertiary
 		""
 	],
+
+	"hairColor" : [ // hair color
+		""
+	],
+	"eyeColor" : [  // eyes
+		""
+	],
+
 
 	"sbqCompatible" : true, // marks this species as compatible with SBQ
 	// the settings config for the species, here you can define default values for
 	// settings, as well as if any values should be overrided or are invalid
 	"sbqSettingsConfig": {
-		"includes" : ["/npcs/sbq/Razumdar_/Raz/tenant.npctype:scriptConfig.sbqSettingsConfig"],
+		"includes" : ["/npcs/sbq/EloTheHobkin/Elo/tenant.npctype:scriptConfig.sbqSettingsConfig"],
 		"defaultSettings": {
 			"any":{
 				"nipplesVisible" : true,
@@ -106,78 +143,55 @@
 			"object" : {}
 		}
 	},
-	"baseColorPalette": { // the base color palette that is used to re-color the images needed
-	// for SBQ's vore animations and certain items
-	// colors are hex codes, list them in order of darkest to lightest
-	// you will always need at least three for the colors to work nicely, the fourth is
-	// simply the highlight color and is optional as not every species has a highlight
-		"primary": ["474d5d","5c6274","6f7587"],
-		"secondary": ["979594","b4b2b1","ddd9d6"],
-		"tertiary": ["0c0d11","14161d","20232c"],
-		// primary and secondary must be defined for how SBQ's digest drops work
-		// any other colors can be named however you wish
-
-		// you cannot make up colors that do not exist within the species' images
-		// if you want them to be properly replaced by customization colors
-		"flesh": ["51577c","6f6e88","87859c"]
-	},
-	// the vore animation images this species will generate when the mod loads
-	// if one wanted to, one could also create species specific ones and place them within
-	// the `humanoid/speciesName` folder at the path of the images here, but that would also
-	// mean the images won't be updated whenever the ones in base SBQ are, so that's up to you
 	"sbqPartImages": {
-		"sbq/noLegs/malebody.png" : { // the species' main body with the legs removed
-		// used by naga and taur
+		"sbq/noLegs/malebody.png" : {
 			"sourceImage" : "malebody.png",
-			// if the mask from base SBQ assests doesn't work well, create your own mask
-			// and put its path down below in the processingDirectives
 			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_male.png;0;0;",
-			// SBQ uses this image patch script to copy the crotch into areas that would have
-			// been covered by the legs and therefore got removed when the legs were
-			// this script might not work if the species has modified the frame layout of the image
 			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
 		},
-		"sbq/malebody.png" : {// the species' main body with the tail removed
-		// used whenever using SBQ's tail animations
-			"sourceImage" : "malebody.png",
-			// if the mask from base SBQ assests doesn't work well, create your own mask
-			// and put its path down below in the processingDirectives
-			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/removeTail_male.png;0;0;"
+		"sbq/noLegs/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/noLegs_female.png;0;0;",
+			"patches" : ["/humanoid/any/sbqImageMasks/noLegs_patch.lua"]
+		},
+		"sbq/malebody.png" : {
+			"sourceImage" : "malebody.png"
+		},
+		"sbq/femalebody.png" : {
+			"sourceImage" : "femalebody.png"
 		},
 		"sbq/fg/malebody.png" : {
 			"sourceImage" : "malebody.png",
-			"processingDirectives" : "?addmask=/humanoid/gnolls/sbq/legMask.png;0;0;"
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
+		},
+		"sbq/fg/femalebody.png" : {
+			"sourceImage" : "femalebody.png",
+			"processingDirectives" : "?addmask=/humanoid/any/sbqImageMasks/legMask.png;0;0;"
 		},
 
-		// the following images are ones that need to have their colors replaced to match the species
-		// this is done by the list of remapDirectives, where the first in each pair is the color in the
-		// source image being replaced, do not modify that, the second entry in the pair is what color
-		// your species uses to replace it with
+
 		"sbq/naga/hips.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
 		},
-		// images with 'infused' in the path are used when this species is 'infused' as part of
-		// another character, in this case it refers to tail TF, usually you'll set the colors
-		// the same as the non infused version, but in some cases you may want it to be different
 		"sbq/infused/naga/hips.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_hips.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
@@ -186,25 +200,24 @@
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_belly.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
 		},
-
 		"sbq/infused/naga/belly.png" : {
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_belly.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
@@ -213,11 +226,11 @@
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_end.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
@@ -226,11 +239,11 @@
 			"sourceImage" : "/humanoid/any/sbqModules/naga/tail_end.png",
 			"remapDirectives": [
 				[
-					"primary", // outer scales
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // underside scales
+					"secondary",
 					"secondary"
 				]
 			]
@@ -270,7 +283,7 @@
 			"sourceImage" : "/humanoid/wr/flareon/tail.png",
 			"remapDirectives": [
 				[
-					"secondary", // yellow fur
+					"secondary",
 					"secondary"
 				]
 			]
@@ -280,7 +293,7 @@
 			"sourceImage" : "/humanoid/wr/flareon/tail.png",
 			"remapDirectives": [
 				[
-					"secondary", // yellow fur
+					"secondary",
 					"secondary"
 				]
 			]
@@ -290,15 +303,15 @@
 			"sourceImage" : "/humanoid/wr/vaporeon/tail.png",
 			"remapDirectives": [
 				[
-					"primary", // light blue
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // dark blue back fins
+					"secondary",
 					"secondary"
 				],
 				[
-					"tertiary", // white underside
+					"tertiary",
 					"secondary"
 				]
 			]
@@ -308,32 +321,27 @@
 			"sourceImage" : "/humanoid/wr/vaporeon/tail.png",
 			"remapDirectives": [
 				[
-					"primary", // light blue
+					"primary",
 					"primary"
 				],
 				[
-					"secondary", // dark blue back fins
+					"secondary",
 					"secondary"
 				],
 				[
-					"tertiary", // white underside
+					"tertiary",
 					"secondary"
 				]
 			]
 		},
-
 		"sbq/luxio_tail.png" : {
 			"sourcePalette" : "/species/wr/luxio.species:baseColorPalette",
 			"sourceImage" : "/humanoid/wr/luxio/tail.png",
 			"remapDirectives": [
 				[
-					"secondary", // black fur
+					"secondary",
 					"secondary"
 				]
-				// [ // uncomment this if the species has a color that glows you can use
-				// 	"eyes", // glowing star
-				// 	"eyes"
-				// ]
 			]
 		},
 		"sbq/infused/luxio_tail.png" : {
@@ -341,20 +349,14 @@
 			"sourceImage" : "/humanoid/wr/luxio/tail.png",
 			"remapDirectives": [
 				[
-					"secondary", // black fur
+					"secondary",
 					"secondary"
 				]
-				// [ // uncomment this if the species has a color that glows you can use
-				// 	"eyes", // glowing star
-				// 	"eyes"
-				// ]
 			]
 		},
 
-		// infuse sprites for the quadruped species' belly
 		"sbq/infused/quadruped/belly.png": {
 			"sourceImage": "/humanoid/wr/quadruped/belly/default.png",
-
 			"processingDirectives": "?replace;00adba=bc1002", // this replaces the navel pixel, don't touch this
 			"remapDirectives": [
 				[
@@ -428,7 +430,7 @@
 			"remapDirectives": [
 				[
 					"primary",
-					"flesh"
+					"primary"
 				]
 			]
 		},
@@ -467,9 +469,158 @@
 					"secondary"
 				]
 			]
+		},
+		"sbq/pussy.png": {
+			"sourceImage": "/humanoid/any/sbqModules/pussy/default.png",
+			"remapDirectives": [
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/pussy.png": {
+			"sourceImage": "/humanoid/any/sbqModules/pussy/default.png",
+			"remapDirectives": [
+				[
+					"flesh",
+					"primary"
+				]
+			]
+		},
+		"sbq/breastsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/breastsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/breastsFront.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/infused/breastsBack.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"flesh",
+					"flesh"
+				]
+			]
+		},
+		"sbq/breastsFront_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/breastsBack_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"primary_180",
+					"primary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/breastsFront_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/front.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
+		},
+		"sbq/infused/breastsBack_noNipples.png": {
+			"sourceImage": "/humanoid/any/sbqModules/breasts/default/back.png",
+			"remapDirectives": [
+				[
+					"primary_180"
+				],
+				[
+					"primary",
+					"secondary"
+				],
+				[
+					"flesh",
+					"tertiary"
+				]
+			]
 		}
 	},
-
 
 	// vanilla default human recipes
 	"defaultBlueprints" : {
@@ -549,4 +700,5 @@
 			{ "item" : "workoutlegs" }
 		]
 	}
+
 }
