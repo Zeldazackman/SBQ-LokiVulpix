@@ -52,6 +52,11 @@
 			"airJumpProfile" : {
 				"multiJump" : true
 			}
+		},
+		"sbqConfig" : {
+			"transformResult": {
+				"species": "wr/nimbat"
+			}
 		}
 	},
 	// these are the ouch noises! you'll probably want to make them point to the sounds your OC would make when hurt, that being custom, or another species'
