@@ -75,7 +75,7 @@
 		},
 		"sbqConfig" : {
 			"transformResult": {
-				"species": "wr/dragon"
+				"species": "wr/dragon/fire"
 			}
 		}
 	},
