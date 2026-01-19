@@ -1,0 +1,66 @@
+{
+	"globalTagDefaults" : {
+		"hornsFrontFrameset" : "",
+		"hornsFrontFlippedFrameset" : "",
+		"hornsBackFrameset" : "",
+		"hornsBackFlippedFrameset" : ""
+	},
+	"animatedParts" : {
+		"parts" : {
+			"hornsFront": {
+				"properties": {
+					"centered": true,
+					"zLevel": 21.1,
+					"anchorPart": "head",
+					"processingDirectives" : "<facialMaskDirectives>"
+				},
+				"partStates": {
+					"body": {
+						"idle": { "properties": { "image": "<humanoidPath><hornsFrontFrameset>:normal", "flippedImage": "<humanoidPath><hornsFrontFlippedFrameset>:normal" } },
+						"duck": { "properties": { "image": "<humanoidPath><hornsFrontFrameset>:normal", "flippedImage": "<humanoidPath><hornsFrontFlippedFrameset>:normal" } },
+						"sit": { "properties": { "image": "<humanoidPath><hornsFrontFrameset>:normal", "flippedImage": "<humanoidPath><hornsFrontFlippedFrameset>:normal" } },
+						"lay": { "properties": { "image": "<humanoidPath><hornsFrontFrameset>:normal", "flippedImage": "<humanoidPath><hornsFrontFlippedFrameset>:normal" } },
+						"walk": "idle",
+						"run": "idle",
+						"runbackwards": "idle",
+						"jump": "idle",
+						"fall": "idle",
+						"swim": "idle",
+						"swimIdle": "idle"
+					},
+					"portraitMode" : {
+						"head": { "properties":{"image": "<humanoidPath><hornsFrontFrameset>:normal<portraitMask>", "flippedImage": "<humanoidPath><hornsFrontFlippedFrameset>:normal<portraitMask>"}},
+						"bust" : "head"
+					}
+				}
+			},
+			"hornsBack": {
+				"properties": {
+					"centered": true,
+					"zLevel": 5.9,
+					"anchorPart": "head",
+					"processingDirectives" : "<facialMaskDirectives>"
+				},
+				"partStates": {
+					"body": {
+						"idle": { "properties": { "image": "<humanoidPath><hornsBackFrameset>:normal", "flippedImage": "<humanoidPath><hornsBackFlippedFrameset>:normal" } },
+						"duck": { "properties": { "image": "<humanoidPath><hornsBackFrameset>:normal", "flippedImage": "<humanoidPath><hornsBackFlippedFrameset>:normal" } },
+						"sit": { "properties": { "image": "<humanoidPath><hornsBackFrameset>:normal", "flippedImage": "<humanoidPath><hornsBackFlippedFrameset>:normal" } },
+						"lay": { "properties": { "image": "<humanoidPath><hornsBackFrameset>:normal", "flippedImage": "<humanoidPath><hornsBackFlippedFrameset>:normal" } },
+						"walk": "idle",
+						"run": "idle",
+						"runbackwards": "idle",
+						"jump": "idle",
+						"fall": "idle",
+						"swim": "idle",
+						"swimIdle": "idle"
+					},
+					"portraitMode" : {
+						"head": { "properties":{"image": "<humanoidPath><hornsBackFrameset>:normal<portraitMask>", "flippedImage": "<humanoidPath><hornsBackFlippedFrameset>:normal<portraitMask>"}},
+						"bust" : "head"
+					}
+				}
+			}
+		}
+	}
+}
